@@ -1,2 +1,0 @@
-# APCompSci2020
-APCompSci202
