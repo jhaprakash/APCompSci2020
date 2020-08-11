@@ -6,6 +6,7 @@ import java.util.Random;
 public class ArrayUtils {
     public static int[] genIntArrayWithRandomElements(int arrLen, int low, int high) {
         int range = high - low;
+        if (range <= arrLen) return null;
         int[] arr = new int[arrLen];
         Random random = new Random();
         for (int i = 0; i < arrLen; i++) {
@@ -16,6 +17,7 @@ public class ArrayUtils {
 
     public static int[] genIntArrayWithUniqueElements(int arrLen, int low, int high) {
         int range = high - low;
+        if (range <= arrLen) return null;
         int[] arr = new int[arrLen];
         Random random = new Random();
         int randomVal = 0;
@@ -32,6 +34,7 @@ public class ArrayUtils {
     }
 
     public static int[] genIntArrayWithDuplicateElements(int arrLen, int dupCount, int low, int high) {
+        if ((high - low) <= arrLen) return null;
         int[] uniqueElements = genIntArrayWithUniqueElements(arrLen/dupCount, low, high);
         System.out.println("Unique elements: ");
         ArrayUtils.printArrayElements(uniqueElements);

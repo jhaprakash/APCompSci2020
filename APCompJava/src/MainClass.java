@@ -49,5 +49,7 @@ public class MainClass {
         System.out.println("Array after reversing order: ");
         ChangeOrder.reverseOrder(uniqueInts);
         ArrayUtils.printArrayElements(uniqueInts);
+
+        BubbleSort.runProgram();
     }
 }
