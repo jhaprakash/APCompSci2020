@@ -5,12 +5,12 @@ package oop;
  *
  * Example of: Constructor chaining, mutators.
  */
-public class Address {
+public class Address implements Comparable<Address> {
     String first;
     String second;
     String city;
     String state;
-    String zip;
+    int zip;
     String country;
 
     public Address() {
@@ -18,11 +18,11 @@ public class Address {
         second = "";
         city = "";
         state = "";
-        zip = "";
+        zip = 0;
         country = "";
     }
 
-    public Address(String first, String city, String state, String zip) {
+    public Address(String first, String city, String state, int zip) {
         this();
         this.first = first;
         this.city = city;
@@ -62,11 +62,11 @@ public class Address {
         this.state = state;
     }
 
-    public String getZip() {
+    public int getZip() {
         return zip;
     }
 
-    public void setZip(String zip) {
+    public void setZip(int zip) {
         this.zip = zip;
     }
 
@@ -76,6 +76,11 @@ public class Address {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    @Override
+    public int compareTo(Address o) {
+        return this.zip - o.zip;
     }
 
     // TODO add method for toString.

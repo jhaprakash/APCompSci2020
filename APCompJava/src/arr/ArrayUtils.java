@@ -55,4 +55,11 @@ public class ArrayUtils {
         }
         System.out.println("");
     }
+
+    public static <T> void printArrayElements(T[] input) {
+        for (T i : input) {
+            System.out.print(i + " ");
+        }
+        System.out.println("");
+    }
 }

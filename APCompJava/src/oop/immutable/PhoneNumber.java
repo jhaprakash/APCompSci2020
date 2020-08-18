@@ -1,6 +1,6 @@
 package oop.immutable;
 
-public class PhoneNumber {
+public class PhoneNumber implements Comparable<PhoneNumber> {
     // Add country code to show how easy it is.
     // private int countryCode;
     private int areaCode;
@@ -20,10 +20,15 @@ public class PhoneNumber {
     }
 
     public String getFormattedNumber() {
-        return areaCode + "-" + number/1000 + "-" + number%1000;
+        return areaCode + "-" + number/10000 + "-" + number%10000;
     }
 
     public String toString() {
         return getFormattedNumber();
+    }
+
+    @Override
+    public int compareTo(PhoneNumber o) {
+        return this.number - o.number;
     }
 }

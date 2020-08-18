@@ -1,4 +1,5 @@
 import arr.*;
+import arr.sort.*;
 
 import java.util.Random;
 
@@ -51,5 +52,10 @@ public class MainClass {
         ArrayUtils.printArrayElements(uniqueInts);
 
         BubbleSort.runProgram();
+
+        Selection.runAlgo();
+        Insersion.runAlgo();
+        MergeSort.runAlgo();
+        QuickSort.runAlgo();
     }
 }
