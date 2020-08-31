@@ -1,5 +1,7 @@
 import arr.*;
 import arr.sort.*;
+import arrlist.LinearBinarySearch;
+import inheritance.InheritanceRunner;
 
 import java.util.Random;
 
@@ -57,5 +59,9 @@ public class MainClass {
         Insersion.runAlgo();
         MergeSort.runAlgo();
         QuickSort.runAlgo();
+
+        InheritanceRunner.run();
+
+        LinearBinarySearch.run();
     }
 }

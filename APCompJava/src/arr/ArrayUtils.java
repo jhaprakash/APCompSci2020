@@ -1,5 +1,9 @@
 package arr;
 
+import arr.sort.BubbleSort;
+
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -13,6 +17,16 @@ public class ArrayUtils {
             arr[i] = low + random.nextInt(range);
         }
         return arr;
+    }
+
+    public static ArrayList<Integer> genSortedIntegerArrayListWithRandomElements(int arrLen, int low, int high) {
+        int[] randomArray = genIntArrayWithRandomElements(arrLen, low, high);
+        BubbleSort.sort(randomArray);
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int i : randomArray) {
+            arrayList.add(i);
+        }
+        return arrayList;
     }
 
     public static int[] genIntArrayWithUniqueElements(int arrLen, int low, int high) {
