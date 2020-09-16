@@ -1,6 +1,7 @@
 import arr.*;
 import arr.sort.*;
 import arrlist.LinearBinarySearch;
+import brickbreaker.BrickBreakerGame;
 import inheritance.InheritanceRunner;
 
 import java.util.Random;
@@ -63,5 +64,7 @@ public class MainClass {
         InheritanceRunner.run();
 
         LinearBinarySearch.run();
+
+        BrickBreakerGame.startGame();
     }
 }
